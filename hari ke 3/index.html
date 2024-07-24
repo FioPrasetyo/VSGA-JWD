@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSGA-JWD-BOOTSTRAP</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Login</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Masukkan username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Masukkan password">
+                    </div>
+                    <div style="margin-top: 1cm;">
+                        <button type="button" class="btn btn-primary btn-block" onclick="checkLogin()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Cek username dan password
+            if (username === 'admin' && password === '123') {
+                window.location.href = 'beranda.html'; // Arahkan ke beranda.html
+            } else {
+                alert('Username atau password salah');
+            }
+        }
+    </script>
+</body>
+
+</html>
